@@ -1,0 +1,9 @@
+# Method support default, date
+# If method is default then date is current date.
+method: default
+# If method is date, you must enter a date.
+date: 20221124
+# Generator support all or generator name.
+# If generator is all then search all generator.
+# Generator name support db01 ~ db15.
+generator: db01
