@@ -1,8 +1,12 @@
 # Method support default, date
-# If method is default then date is current date.
-method: default
+# If method is select date or range
+# date, range
+method: date
 # If method is date, you must enter a date.
-date: 20221124
+date: 20220802
+# if method is range, you must enter a start date and end date
+start_date: 20220820
+end_date: 20220901
 # Generator support all or generator name.
 # If generator is all then search all generator.
 # Generator name support db01 ~ db15.

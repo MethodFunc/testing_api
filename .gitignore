@@ -521,3 +521,7 @@ cython_debug/
 
 # mac
 .DS_Store
+
+info.log
+database/information.py
+bin/request_information.py

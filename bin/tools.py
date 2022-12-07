@@ -14,7 +14,7 @@ def reformatting_json(data):
 
     dataframe['ds'] = dataframe['ds'].astype('str')
 
-    return dataframe.to_dict()
+    return dataframe
 
 
 def reformat_forecast_dataframe(json_string: str):

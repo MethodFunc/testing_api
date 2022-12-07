@@ -41,8 +41,8 @@ def get_scada_data(db: Session, table_name: str, start_time: str, end_time: str)
 def get_forecast_data(db: Session, table_name: str, start_time: str, end_time: str):
     start_time, end_time = utc_convert(start_time, end_time)
     table = models.create_forcast(table_name)
-    result = db.query(func.date_trunc('hour', func.timezone('KST', func.timezone('UTC', table.record_date))) \
-                      .label('ds'), func.avg(table.active_power).label('actual')) \
+    result = db.query(func.date_trunc('hour', func.timezone('UTC', table.record_date)) \
+                      .label('ds'), func.avg(table.forecast).label('forecast')) \
         .order_by(text('1')) \
         .group_by(text('1')) \
         .filter(table.record_date >= start_time) \
